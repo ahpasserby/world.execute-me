@@ -1,0 +1,3547 @@
+{
+  "format": 1,
+  "model": "phrase-wise selection: small.en / base.en",
+  "tool": "stable-ts 2.19.1 align_words",
+  "audio_sha256": "2da5fb306fc83b178617da9283b94e65933ae0c9c99d40b0b91be5266ed21a40",
+  "note": "Audio forced alignment inside original phrase bounds. Words flagged minimum-slot-estimate were repaired to remain visible and require listening review; no claim of manually verified phoneme timing.",
+  "lines": [
+    {
+      "time": 0.1,
+      "end": 1.74,
+      "text": "Switch on the power line",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Switch",
+          "start": 0.1,
+          "end": 0.6,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "on",
+          "start": 0.6,
+          "end": 1.02,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 1.02,
+          "end": 1.2,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "power",
+          "start": 1.2,
+          "end": 1.44,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "line",
+          "start": 1.44,
+          "end": 1.72,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 1.74,
+      "end": 2.92,
+      "text": "Remember to put on",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Remember",
+          "start": 1.74,
+          "end": 2.24,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "to",
+          "start": 2.24,
+          "end": 2.68,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "put",
+          "start": 2.68,
+          "end": 2.86,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "on",
+          "start": 2.86,
+          "end": 2.92,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "base.en"
+    },
+    {
+      "time": 2.92,
+      "end": 3.873,
+      "text": "PROTECTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "PROTECTION",
+          "start": 2.92,
+          "end": 3.873,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 3.873,
+      "end": 5.491,
+      "text": "Lay down your pieces",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Lay",
+          "start": 3.873,
+          "end": 4.213,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "down",
+          "start": 4.213,
+          "end": 4.673,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "your",
+          "start": 4.673,
+          "end": 4.893,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "pieces",
+          "start": 4.893,
+          "end": 5.253,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 5.491,
+      "end": 6.38,
+      "text": "And let's begin",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "And",
+          "start": 5.491,
+          "end": 5.771,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "let's",
+          "start": 5.771,
+          "end": 6.071,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "begin",
+          "start": 6.071,
+          "end": 6.231,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 6.38,
+      "end": 7.446,
+      "text": "OBJECT CREATION",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "OBJECT",
+          "start": 6.38,
+          "end": 6.88,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "CREATION",
+          "start": 6.88,
+          "end": 7.36,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 7.446,
+      "end": 10.091,
+      "text": "Fill in my data parameters",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Fill",
+          "start": 7.446,
+          "end": 7.886,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "in",
+          "start": 7.886,
+          "end": 8.346,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 8.346,
+          "end": 8.586,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "data",
+          "start": 8.586,
+          "end": 9.086,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "parameters",
+          "start": 9.086,
+          "end": 9.726,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 10.091,
+      "end": 11.095,
+      "text": "INITIALIZATION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "INITIALIZATION",
+          "start": 10.091,
+          "end": 11.095,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 11.095,
+      "end": 12.906,
+      "text": "Set up our new world",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Set",
+          "start": 11.095,
+          "end": 11.535,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "up",
+          "start": 11.535,
+          "end": 12.075,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "our",
+          "start": 12.075,
+          "end": 12.275,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "new",
+          "start": 12.275,
+          "end": 12.535,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "world",
+          "start": 12.535,
+          "end": 12.795,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 12.906,
+      "end": 13.891,
+      "text": "And let's begin the",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "And",
+          "start": 12.906,
+          "end": 13.106,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "let's",
+          "start": 13.106,
+          "end": 13.506,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "begin",
+          "start": 13.506,
+          "end": 13.746,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 13.746,
+          "end": 13.866,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 13.891,
+      "end": 16.0,
+      "text": "SIMULATION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "SIMULATION",
+          "start": 13.891,
+          "end": 16.0,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 16.0,
+      "end": 20.5,
+      "text": "world.execute(me);",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "world.execute(me);",
+          "start": 16.0,
+          "end": 20.5,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 29.709,
+      "end": 31.116,
+      "text": "If I'm a set of points",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 29.709,
+          "end": 30.109,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I'm",
+          "start": 30.109,
+          "end": 30.609,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "a",
+          "start": 30.609,
+          "end": 30.709,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "set",
+          "start": 30.709,
+          "end": 30.869,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "of",
+          "start": 30.869,
+          "end": 31.049,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "points",
+          "start": 31.049,
+          "end": 31.116,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 31.116,
+      "end": 32.682,
+      "text": "Then I will give you my",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 31.116,
+          "end": 31.636,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 31.636,
+          "end": 31.856,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "will",
+          "start": 31.856,
+          "end": 32.076,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "give",
+          "start": 32.076,
+          "end": 32.336,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 32.336,
+          "end": 32.576,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 32.576,
+          "end": 32.656,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 32.682,
+      "end": 33.412,
+      "text": "DIMENSION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "DIMENSION",
+          "start": 32.682,
+          "end": 33.412,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 33.412,
+      "end": 34.646,
+      "text": "If I'm a circle",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 33.412,
+          "end": 33.812,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I'm",
+          "start": 33.812,
+          "end": 34.352,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "a",
+          "start": 34.352,
+          "end": 34.412,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "circle",
+          "start": 34.412,
+          "end": 34.632,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 34.646,
+      "end": 36.287,
+      "text": "Then I will give you my",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 34.646,
+          "end": 35.246,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 35.246,
+          "end": 35.506,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "will",
+          "start": 35.506,
+          "end": 35.666,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "give",
+          "start": 35.666,
+          "end": 35.906,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 35.906,
+          "end": 36.186,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 36.186,
+          "end": 36.246,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "base.en"
+    },
+    {
+      "time": 36.287,
+      "end": 37.067,
+      "text": "CIRCUMFERENCE",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "CIRCUMFERENCE",
+          "start": 36.287,
+          "end": 37.067,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 37.067,
+      "end": 38.596,
+      "text": "If I'm a sine wave",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 37.067,
+          "end": 37.467,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I'm",
+          "start": 37.467,
+          "end": 38.027,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "a",
+          "start": 38.027,
+          "end": 38.127,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "sine",
+          "start": 38.127,
+          "end": 38.407,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "wave",
+          "start": 38.407,
+          "end": 38.567,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 38.596,
+      "end": 40.049,
+      "text": "Then you can sit on all my",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 38.596,
+          "end": 38.996,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 38.996,
+          "end": 39.216,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 39.216,
+          "end": 39.436,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "sit",
+          "start": 39.436,
+          "end": 39.716,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "on",
+          "start": 39.716,
+          "end": 39.929,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "all",
+          "start": 39.929,
+          "end": 39.989,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "my",
+          "start": 39.989,
+          "end": 40.049,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 40.049,
+      "end": 40.706,
+      "text": "TANGENTS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "TANGENTS",
+          "start": 40.049,
+          "end": 40.706,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 40.706,
+      "end": 42.346,
+      "text": "If I approach infinity",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 40.706,
+          "end": 41.006,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 41.006,
+          "end": 41.286,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "approach",
+          "start": 41.286,
+          "end": 41.526,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "infinity",
+          "start": 41.526,
+          "end": 41.986,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 42.346,
+      "end": 43.507,
+      "text": "Then you can be my",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 42.346,
+          "end": 42.686,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 42.686,
+          "end": 42.906,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 42.906,
+          "end": 43.146,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "be",
+          "start": 43.146,
+          "end": 43.386,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 43.386,
+          "end": 43.486,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 43.507,
+      "end": 44.452,
+      "text": "LIMITATIONS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "LIMITATIONS",
+          "start": 43.507,
+          "end": 44.452,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 44.452,
+      "end": 45.85,
+      "text": "Switch my current",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Switch",
+          "start": 44.452,
+          "end": 44.992,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 44.992,
+          "end": 45.332,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "current",
+          "start": 45.332,
+          "end": 45.752,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 45.85,
+      "end": 47.672,
+      "text": "To AC to DC",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "To",
+          "start": 45.85,
+          "end": 46.35,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "AC",
+          "start": 46.35,
+          "end": 46.71,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "to",
+          "start": 46.71,
+          "end": 47.33,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "DC",
+          "start": 47.33,
+          "end": 47.51,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 47.672,
+      "end": 49.534,
+      "text": "And then blind my vision",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "And",
+          "start": 47.672,
+          "end": 48.052,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "then",
+          "start": 48.052,
+          "end": 48.252,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "blind",
+          "start": 48.252,
+          "end": 48.592,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 48.592,
+          "end": 49.052,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "vision",
+          "start": 49.052,
+          "end": 49.392,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 49.534,
+      "end": 51.363,
+      "text": "So dizzy so dizzy",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "So",
+          "start": 49.534,
+          "end": 50.094,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "dizzy",
+          "start": 50.094,
+          "end": 50.614,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "so",
+          "start": 50.614,
+          "end": 50.974,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "dizzy",
+          "start": 50.974,
+          "end": 51.334,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 51.363,
+      "end": 53.225,
+      "text": "Oh we can travel",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Oh",
+          "start": 51.363,
+          "end": 51.743,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "we",
+          "start": 51.743,
+          "end": 52.023,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 52.023,
+          "end": 52.703,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "travel",
+          "start": 52.703,
+          "end": 53.103,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 53.225,
+      "end": 55.083,
+      "text": "To A.D to B.C",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "To",
+          "start": 53.225,
+          "end": 53.745,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "A.D",
+          "start": 53.745,
+          "end": 54.205,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "to",
+          "start": 54.205,
+          "end": 54.665,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "B.C",
+          "start": 54.665,
+          "end": 55.065,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 55.083,
+      "end": 56.916,
+      "text": "And we can unite",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "And",
+          "start": 55.083,
+          "end": 55.483,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "we",
+          "start": 55.483,
+          "end": 55.943,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 55.943,
+          "end": 56.423,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "unite",
+          "start": 56.423,
+          "end": 56.783,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 56.916,
+      "end": 59.223,
+      "text": "So deeply so deeply",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "So",
+          "start": 56.916,
+          "end": 57.496,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "deeply",
+          "start": 57.496,
+          "end": 57.756,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "so",
+          "start": 57.756,
+          "end": 58.376,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "deeply",
+          "start": 58.376,
+          "end": 58.716,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 59.223,
+      "end": 59.687,
+      "text": "If I can",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 59.223,
+          "end": 59.567,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "I",
+          "start": 59.567,
+          "end": 59.627,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "can",
+          "start": 59.627,
+          "end": 59.687,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 59.687,
+      "end": 61.958,
+      "text": "If I can give you all the",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 60.243,
+          "end": 60.563,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 60.563,
+          "end": 60.923,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 60.923,
+          "end": 61.163,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "give",
+          "start": 61.163,
+          "end": 61.403,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 61.403,
+          "end": 61.643,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "all",
+          "start": 61.643,
+          "end": 61.843,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 61.843,
+          "end": 61.943,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 61.958,
+      "end": 62.589,
+      "text": "STIMULATIONS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "STIMULATIONS",
+          "start": 61.958,
+          "end": 62.589,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 62.589,
+      "end": 63.535,
+      "text": "Then I can",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 62.589,
+          "end": 62.649,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "I",
+          "start": 62.649,
+          "end": 62.709,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "can",
+          "start": 62.709,
+          "end": 62.989,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 63.535,
+      "end": 65.397,
+      "text": "Then I can be your only",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 63.535,
+          "end": 63.895,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 63.895,
+          "end": 64.295,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 64.295,
+          "end": 64.635,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "be",
+          "start": 64.635,
+          "end": 64.715,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "your",
+          "start": 64.715,
+          "end": 65.235,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "only",
+          "start": 65.235,
+          "end": 65.375,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 65.397,
+      "end": 66.601,
+      "text": "SATISFACTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "SATISFACTION",
+          "start": 65.397,
+          "end": 66.601,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 66.601,
+      "end": 68.252,
+      "text": "If I can make you happy",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 66.601,
+          "end": 67.001,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 67.001,
+          "end": 67.401,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 67.401,
+          "end": 67.601,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "make",
+          "start": 67.601,
+          "end": 67.861,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 67.861,
+          "end": 68.081,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "happy",
+          "start": 68.081,
+          "end": 68.241,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 68.252,
+      "end": 69.259,
+      "text": "I will run the",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "I",
+          "start": 68.252,
+          "end": 68.732,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "will",
+          "start": 68.732,
+          "end": 68.972,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "run",
+          "start": 68.972,
+          "end": 69.172,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 69.172,
+          "end": 69.232,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 69.259,
+      "end": 70.084,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 69.259,
+          "end": 70.084,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 70.084,
+      "end": 71.764,
+      "text": "Though we are trapped",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Though",
+          "start": 70.084,
+          "end": 70.464,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "we",
+          "start": 70.464,
+          "end": 71.104,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "are",
+          "start": 71.104,
+          "end": 71.264,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "trapped",
+          "start": 71.264,
+          "end": 71.624,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 71.764,
+      "end": 73.169,
+      "text": "In this strange strange",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "In",
+          "start": 71.764,
+          "end": 72.044,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "this",
+          "start": 72.044,
+          "end": 72.264,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "strange",
+          "start": 72.264,
+          "end": 72.604,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "strange",
+          "start": 72.604,
+          "end": 72.984,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 73.169,
+      "end": 74.045,
+      "text": "SIMULATION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "SIMULATION",
+          "start": 73.169,
+          "end": 74.045,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 74.045,
+      "end": 75.422,
+      "text": "If I'm an eggplant",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 74.045,
+          "end": 74.405,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I'm",
+          "start": 74.405,
+          "end": 75.025,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "an",
+          "start": 75.025,
+          "end": 75.165,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "eggplant",
+          "start": 75.165,
+          "end": 75.405,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 75.422,
+      "end": 76.959,
+      "text": "Then I will give you my",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 75.422,
+          "end": 75.902,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 75.902,
+          "end": 76.202,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "will",
+          "start": 76.202,
+          "end": 76.382,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "give",
+          "start": 76.382,
+          "end": 76.642,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 76.642,
+          "end": 76.862,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 76.862,
+          "end": 76.942,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 76.959,
+      "end": 77.576,
+      "text": "NUTRIENTS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "NUTRIENTS",
+          "start": 76.959,
+          "end": 77.576,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 77.576,
+      "end": 79.226,
+      "text": "If I'm a tomato",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 77.784,
+          "end": 78.104,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I'm",
+          "start": 78.104,
+          "end": 78.664,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "a",
+          "start": 78.664,
+          "end": 78.764,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "tomato",
+          "start": 78.764,
+          "end": 79.044,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 79.226,
+      "end": 80.62,
+      "text": "Then I will give you",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 79.226,
+          "end": 79.666,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 79.666,
+          "end": 79.906,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "will",
+          "start": 79.906,
+          "end": 80.086,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "give",
+          "start": 80.086,
+          "end": 80.306,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 80.306,
+          "end": 80.526,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 80.62,
+      "end": 81.351,
+      "text": "ANTIOXIDANTS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "ANTIOXIDANTS",
+          "start": 80.62,
+          "end": 81.351,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 81.351,
+      "end": 82.833,
+      "text": "If I'm a tabby cat",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 81.351,
+          "end": 81.731,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I'm",
+          "start": 81.731,
+          "end": 82.351,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "a",
+          "start": 82.351,
+          "end": 82.471,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "tabby",
+          "start": 82.471,
+          "end": 82.751,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "cat",
+          "start": 82.751,
+          "end": 82.833,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 82.833,
+      "end": 84.268,
+      "text": "Then I will purr for your",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 82.833,
+          "end": 83.253,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 83.253,
+          "end": 83.553,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "will",
+          "start": 83.553,
+          "end": 83.773,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "purr",
+          "start": 83.773,
+          "end": 84.093,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "for",
+          "start": 84.093,
+          "end": 84.193,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "your",
+          "start": 84.193,
+          "end": 84.253,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 84.268,
+      "end": 85.078,
+      "text": "ENJOYMENT",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "ENJOYMENT",
+          "start": 84.268,
+          "end": 85.078,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 85.078,
+      "end": 86.538,
+      "text": "If I'm the only god",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 85.078,
+          "end": 85.498,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I'm",
+          "start": 85.498,
+          "end": 86.018,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 86.018,
+          "end": 86.178,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "only",
+          "start": 86.178,
+          "end": 86.398,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "god",
+          "start": 86.398,
+          "end": 86.518,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 86.538,
+      "end": 87.922,
+      "text": "Then you're the proof of my",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 86.538,
+          "end": 86.938,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you're",
+          "start": 86.938,
+          "end": 87.298,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 87.298,
+          "end": 87.358,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "proof",
+          "start": 87.358,
+          "end": 87.718,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "of",
+          "start": 87.718,
+          "end": 87.838,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 87.838,
+          "end": 87.898,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "base.en"
+    },
+    {
+      "time": 87.922,
+      "end": 88.587,
+      "text": "EXISTENCE",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXISTENCE",
+          "start": 87.922,
+          "end": 88.587,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 88.587,
+      "end": 90.197,
+      "text": "Switch my gender",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Switch",
+          "start": 88.587,
+          "end": 89.207,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 89.207,
+          "end": 89.607,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "gender",
+          "start": 89.607,
+          "end": 90.007,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 90.197,
+      "end": 92.015,
+      "text": "To F to M",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "To",
+          "start": 90.197,
+          "end": 90.677,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "F",
+          "start": 90.677,
+          "end": 91.177,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "to",
+          "start": 91.177,
+          "end": 91.637,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "M",
+          "start": 91.637,
+          "end": 91.917,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 92.015,
+      "end": 93.953,
+      "text": "And then do whatever",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "And",
+          "start": 92.015,
+          "end": 92.355,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "then",
+          "start": 92.355,
+          "end": 92.535,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "do",
+          "start": 92.535,
+          "end": 92.995,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "whatever",
+          "start": 92.995,
+          "end": 93.375,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 93.953,
+      "end": 95.465,
+      "text": "From AM to PM",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "From",
+          "start": 93.953,
+          "end": 94.373,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "AM",
+          "start": 94.373,
+          "end": 94.873,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "to",
+          "start": 94.873,
+          "end": 95.313,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "PM",
+          "start": 95.313,
+          "end": 95.453,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 95.465,
+      "end": 97.739,
+      "text": "Oh switch my role",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Oh",
+          "start": 95.465,
+          "end": 96.125,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "switch",
+          "start": 96.125,
+          "end": 96.485,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "my",
+          "start": 96.485,
+          "end": 97.065,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "role",
+          "start": 97.065,
+          "end": 97.505,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 97.739,
+      "end": 99.34899999999999,
+      "text": "To S to M",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "To",
+          "start": 97.739,
+          "end": 98.139,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "S",
+          "start": 98.139,
+          "end": 98.659,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "to",
+          "start": 98.659,
+          "end": 99.039,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "M",
+          "start": 99.039,
+          "end": 99.319,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 99.34899999999999,
+      "end": 101.47399999999999,
+      "text": "So we can enter",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "So",
+          "start": 99.349,
+          "end": 99.829,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "we",
+          "start": 99.829,
+          "end": 100.349,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 100.349,
+          "end": 100.829,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "enter",
+          "start": 100.829,
+          "end": 101.329,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 101.47399999999999,
+      "end": 103.489,
+      "text": "The trance the trance",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "The",
+          "start": 101.474,
+          "end": 101.714,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "trance",
+          "start": 101.714,
+          "end": 102.274,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 102.274,
+          "end": 102.634,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "trance",
+          "start": 102.634,
+          "end": 103.194,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 103.489,
+      "end": 104.197,
+      "text": "If I can",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 103.489,
+          "end": 103.869,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 103.869,
+          "end": 104.109,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 104.109,
+          "end": 104.169,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "base.en"
+    },
+    {
+      "time": 104.197,
+      "end": 106.293,
+      "text": "If I can feel your",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 104.197,
+          "end": 104.457,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 104.457,
+          "end": 105.157,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 105.157,
+          "end": 105.397,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "feel",
+          "start": 105.397,
+          "end": 105.617,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "your",
+          "start": 105.617,
+          "end": 106.057,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "base.en"
+    },
+    {
+      "time": 106.293,
+      "end": 107.22,
+      "text": "VIBRATIONS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "VIBRATIONS",
+          "start": 106.293,
+          "end": 107.22,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 107.22,
+      "end": 107.90299999999999,
+      "text": "Then I can",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 107.45,
+          "end": 107.7,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 107.7,
+          "end": 107.76,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "can",
+          "start": 107.76,
+          "end": 107.82,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 107.90299999999999,
+      "end": 110.221,
+      "text": "Then I can finally be",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 107.903,
+          "end": 108.303,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 108.303,
+          "end": 108.943,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 108.943,
+          "end": 109.123,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "finally",
+          "start": 109.123,
+          "end": 109.583,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "be",
+          "start": 109.583,
+          "end": 110.203,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 110.221,
+      "end": 110.9,
+      "text": "COMPLETION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "COMPLETION",
+          "start": 110.221,
+          "end": 110.9,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 110.9,
+      "end": 112.22,
+      "text": "Though you have left",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Though",
+          "start": 110.9,
+          "end": 111.36,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 111.36,
+          "end": 111.68,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "have",
+          "start": 111.68,
+          "end": 111.9,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "left",
+          "start": 111.9,
+          "end": 112.1,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 112.22,
+      "end": 113.1,
+      "text": "You have left",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "You",
+          "start": 112.22,
+          "end": 112.66,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "have",
+          "start": 112.66,
+          "end": 112.84,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "left",
+          "start": 112.84,
+          "end": 113.02,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 113.1,
+      "end": 114.18,
+      "text": "You have left",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "You",
+          "start": 113.1,
+          "end": 113.46,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "have",
+          "start": 113.46,
+          "end": 113.72,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "left",
+          "start": 113.72,
+          "end": 113.84,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 114.18,
+      "end": 114.92,
+      "text": "You have left",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "You",
+          "start": 114.22,
+          "end": 114.42,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "have",
+          "start": 114.42,
+          "end": 114.66,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "left",
+          "start": 114.66,
+          "end": 114.92,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 114.92,
+      "end": 115.78,
+      "text": "You have left",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "You",
+          "start": 115.14,
+          "end": 115.38,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "have",
+          "start": 115.38,
+          "end": 115.58,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "left",
+          "start": 115.58,
+          "end": 115.78,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 115.78,
+      "end": 117.274,
+      "text": "You have left me in",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "You",
+          "start": 115.78,
+          "end": 116.3,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "have",
+          "start": 116.3,
+          "end": 116.54,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "left",
+          "start": 116.54,
+          "end": 116.78,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "me",
+          "start": 116.78,
+          "end": 117.14,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "in",
+          "start": 117.14,
+          "end": 117.26,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 117.274,
+      "end": 118.333,
+      "text": "ISOLATION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "ISOLATION",
+          "start": 117.274,
+          "end": 118.333,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 118.333,
+      "end": 118.979,
+      "text": "If I can",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 118.393,
+          "end": 118.793,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 118.793,
+          "end": 118.919,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "can",
+          "start": 118.919,
+          "end": 118.979,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 118.979,
+      "end": 120.86,
+      "text": "If I can erase all the pointless",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 118.979,
+          "end": 119.039,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "I",
+          "start": 119.039,
+          "end": 119.099,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "can",
+          "start": 119.099,
+          "end": 119.339,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "erase",
+          "start": 119.339,
+          "end": 119.619,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "all",
+          "start": 119.619,
+          "end": 119.679,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "the",
+          "start": 119.679,
+          "end": 119.739,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "pointless",
+          "start": 119.739,
+          "end": 119.949,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 120.86,
+      "end": 121.728,
+      "text": "FRAGMENTS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "FRAGMENTS",
+          "start": 120.86,
+          "end": 121.728,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 121.728,
+      "end": 122.714,
+      "text": "Then maybe",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 121.728,
+          "end": 122.088,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "maybe",
+          "start": 122.088,
+          "end": 122.488,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 122.714,
+      "end": 124.89,
+      "text": "Then maybe you won't leave me so",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 122.714,
+          "end": 122.814,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "maybe",
+          "start": 122.814,
+          "end": 123.014,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 123.014,
+          "end": 124.094,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "won't",
+          "start": 124.094,
+          "end": 124.374,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "leave",
+          "start": 124.374,
+          "end": 124.634,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "me",
+          "start": 124.634,
+          "end": 124.83,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "so",
+          "start": 124.83,
+          "end": 124.89,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 124.89,
+      "end": 125.708,
+      "text": "DISHEARTENED",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "DISHEARTENED",
+          "start": 124.89,
+          "end": 125.708,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 125.708,
+      "end": 128.661,
+      "text": "Challenging your god",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Challenging",
+          "start": 125.708,
+          "end": 127.088,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "your",
+          "start": 127.088,
+          "end": 127.468,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "god",
+          "start": 127.468,
+          "end": 128.028,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "base.en"
+    },
+    {
+      "time": 128.661,
+      "end": 131.224,
+      "text": "You have made some",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "You",
+          "start": 128.661,
+          "end": 129.201,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "have",
+          "start": 129.201,
+          "end": 129.481,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "made",
+          "start": 129.481,
+          "end": 130.021,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "some",
+          "start": 130.021,
+          "end": 130.661,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 131.224,
+      "end": 135.724,
+      "text": "ILLEGAL ARGUMENTS",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "ILLEGAL",
+          "start": 131.224,
+          "end": 132.544,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "ARGUMENTS",
+          "start": 132.544,
+          "end": 133.804,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 147.66,
+      "end": 148.6,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 147.66,
+          "end": 148.6,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 148.6,
+      "end": 149.52,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 148.6,
+          "end": 149.52,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 149.52,
+      "end": 150.54,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 149.52,
+          "end": 150.54,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 150.54,
+      "end": 151.52,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 150.54,
+          "end": 151.52,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 151.52,
+      "end": 152.28,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 151.52,
+          "end": 152.28,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 152.28,
+      "end": 153.16,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 152.28,
+          "end": 153.16,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 153.16,
+      "end": 153.98,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 153.16,
+          "end": 153.98,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 153.98,
+      "end": 155.2,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 153.98,
+          "end": 155.2,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 155.2,
+      "end": 156.07999999999998,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 155.2,
+          "end": 156.08,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 156.07999999999998,
+      "end": 157.04,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 156.08,
+          "end": 157.04,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 157.04,
+      "end": 158.0,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 157.04,
+          "end": 158.0,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 158.0,
+      "end": 158.9,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 158.0,
+          "end": 158.9,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 158.9,
+      "end": 159.321,
+      "text": "EIN",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EIN",
+          "start": 158.9,
+          "end": 159.321,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 159.321,
+      "end": 159.65699999999998,
+      "text": "DOS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "DOS",
+          "start": 159.321,
+          "end": 159.657,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 159.65699999999998,
+      "end": 160.244,
+      "text": "TROIS",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "TROIS",
+          "start": 159.657,
+          "end": 160.244,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 160.244,
+      "end": 160.69299999999998,
+      "text": "NE",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "NE",
+          "start": 160.244,
+          "end": 160.693,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 160.69299999999998,
+      "end": 161.124,
+      "text": "FEM",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "FEM",
+          "start": 160.693,
+          "end": 161.124,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 161.124,
+      "end": 161.584,
+      "text": "LIU",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "LIU",
+          "start": 161.124,
+          "end": 161.584,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 161.584,
+      "end": 162.632,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 161.584,
+          "end": 162.632,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 162.632,
+      "end": 163.315,
+      "text": "If I can",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 162.632,
+          "end": 162.692,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "I",
+          "start": 162.692,
+          "end": 163.232,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "can",
+          "start": 163.232,
+          "end": 163.292,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "base.en"
+    },
+    {
+      "time": 163.315,
+      "end": 165.166,
+      "text": "If I can give them all the",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 163.62,
+          "end": 163.96,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 163.96,
+          "end": 164.32,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 164.32,
+          "end": 164.54,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "give",
+          "start": 164.54,
+          "end": 164.78,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "them",
+          "start": 164.78,
+          "end": 164.98,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "all",
+          "start": 164.98,
+          "end": 165.106,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "the",
+          "start": 165.106,
+          "end": 165.166,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 165.166,
+      "end": 166.016,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 165.166,
+          "end": 166.016,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 166.016,
+      "end": 167.022,
+      "text": "Then I can",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 166.016,
+          "end": 166.416,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 166.416,
+          "end": 166.736,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 166.736,
+          "end": 166.976,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 167.022,
+      "end": 168.911,
+      "text": "Then I can be your only",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Then",
+          "start": 167.022,
+          "end": 167.342,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 167.342,
+          "end": 167.662,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 167.662,
+          "end": 168.182,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "be",
+          "start": 168.182,
+          "end": 168.522,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "your",
+          "start": 168.522,
+          "end": 168.782,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "only",
+          "start": 168.782,
+          "end": 168.882,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 168.911,
+      "end": 169.824,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 168.911,
+          "end": 169.824,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 169.824,
+      "end": 171.868,
+      "text": "If I can have you back",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "If",
+          "start": 169.891,
+          "end": 170.331,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 170.331,
+          "end": 170.751,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 170.751,
+          "end": 170.971,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "have",
+          "start": 170.971,
+          "end": 171.331,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 171.331,
+          "end": 171.691,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "back",
+          "start": 171.691,
+          "end": 171.868,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 171.868,
+      "end": 172.712,
+      "text": "I will run the",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "I",
+          "start": 171.868,
+          "end": 171.988,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "will",
+          "start": 171.988,
+          "end": 172.268,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "run",
+          "start": 172.268,
+          "end": 172.568,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 172.568,
+          "end": 172.688,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 172.712,
+      "end": 173.643,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 172.712,
+          "end": 173.643,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 173.643,
+      "end": 174.975,
+      "text": "Though we are trapped",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Though",
+          "start": 173.643,
+          "end": 173.863,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "we",
+          "start": 173.863,
+          "end": 174.443,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "are",
+          "start": 174.443,
+          "end": 174.663,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "trapped",
+          "start": 174.663,
+          "end": 174.883,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 174.975,
+      "end": 177.246,
+      "text": "We are trapped ah",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "We",
+          "start": 174.975,
+          "end": 175.415,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "are",
+          "start": 175.415,
+          "end": 175.615,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "trapped",
+          "start": 175.615,
+          "end": 176.035,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "ah",
+          "start": 176.035,
+          "end": 176.555,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 177.246,
+      "end": 178.173,
+      "text": "I've studied",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "I've",
+          "start": 177.246,
+          "end": 177.846,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "studied",
+          "start": 177.846,
+          "end": 178.126,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 178.173,
+      "end": 179.929,
+      "text": "I've studied how to properly",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "I've",
+          "start": 178.173,
+          "end": 178.733,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "studied",
+          "start": 178.733,
+          "end": 179.153,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "how",
+          "start": 179.153,
+          "end": 179.533,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "to",
+          "start": 179.533,
+          "end": 179.753,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "properly",
+          "start": 179.753,
+          "end": 179.913,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 179.929,
+      "end": 180.857,
+      "text": "LO-O-OVE",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "LO-O-OVE",
+          "start": 179.929,
+          "end": 180.857,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 180.857,
+      "end": 181.901,
+      "text": "Question me",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Question",
+          "start": 180.857,
+          "end": 181.537,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "me",
+          "start": 181.537,
+          "end": 181.877,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "base.en"
+    },
+    {
+      "time": 181.901,
+      "end": 183.646,
+      "text": "Question me I can answer all",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Question",
+          "start": 182.073,
+          "end": 182.553,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "me",
+          "start": 182.553,
+          "end": 183.073,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "I",
+          "start": 183.073,
+          "end": 183.233,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "can",
+          "start": 183.233,
+          "end": 183.473,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "answer",
+          "start": 183.473,
+          "end": 183.586,
+          "timing": "minimum-slot-estimate"
+        },
+        {
+          "text": "all",
+          "start": 183.586,
+          "end": 183.646,
+          "timing": "minimum-slot-estimate"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 183.646,
+      "end": 184.54,
+      "text": "LO-O-OVE",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "LO-O-OVE",
+          "start": 183.646,
+          "end": 184.54,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 184.54,
+      "end": 187.665,
+      "text": "I know the algebraic expression of",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "I",
+          "start": 184.54,
+          "end": 185.12,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "know",
+          "start": 185.12,
+          "end": 185.38,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "the",
+          "start": 185.38,
+          "end": 185.76,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "algebraic",
+          "start": 185.76,
+          "end": 186.84,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "expression",
+          "start": 186.84,
+          "end": 187.3,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "of",
+          "start": 187.3,
+          "end": 187.64,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 187.665,
+      "end": 188.483,
+      "text": "LO-O-OVE",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "LO-O-OVE",
+          "start": 187.665,
+          "end": 188.483,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 188.483,
+      "end": 189.746,
+      "text": "Though you are free",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Though",
+          "start": 188.483,
+          "end": 188.823,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "you",
+          "start": 188.823,
+          "end": 189.263,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "are",
+          "start": 189.263,
+          "end": 189.523,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "free",
+          "start": 189.523,
+          "end": 189.723,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 189.746,
+      "end": 190.801,
+      "text": "I am trapped",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "I",
+          "start": 189.746,
+          "end": 190.186,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "am",
+          "start": 190.186,
+          "end": 190.346,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "trapped",
+          "start": 190.346,
+          "end": 190.646,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 190.801,
+      "end": 191.356,
+      "text": "Trapped in",
+      "method": "forced-alignment",
+      "words": [
+        {
+          "text": "Trapped",
+          "start": 190.801,
+          "end": 191.261,
+          "timing": "forced-alignment"
+        },
+        {
+          "text": "in",
+          "start": 191.261,
+          "end": 191.341,
+          "timing": "forced-alignment"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 191.356,
+      "end": 195.856,
+      "text": "LO-O-OVE",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "LO-O-OVE",
+          "start": 191.356,
+          "end": 195.856,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    },
+    {
+      "time": 205.811,
+      "end": 210.311,
+      "text": "EXECUTION",
+      "method": "source-cue",
+      "words": [
+        {
+          "text": "EXECUTION",
+          "start": 205.811,
+          "end": 210.311,
+          "timing": "source-cue"
+        }
+      ],
+      "model": "small.en"
+    }
+  ],
+  "estimated_words": 29
+}

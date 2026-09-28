@@ -112,12 +112,15 @@ CHAPTERS=[(0,'01 / CREATION','创建'),(29.709,'02 / DEVOTION','献出自我'),
           (177.246,'05 / LOVE','困于爱')]
 
 class Film:
-    def __init__(self):
+    def __init__(self,original=False):
         self.lyrics=json.loads((ROOT/'lyrics.json').read_text())
         self.times=[x['time'] for x in self.lyrics]
         self.spectrum=json.loads((ROOT/'spectrum.json').read_text())
         self.config=json.loads((ROOT/'config.json').read_text())
+        self.original=original
         self.responses=[]
+        from word_score import score
+        self.word_score=score()
     def respond(self,t):
         self.responses.append(max(0.,t))
         self.responses=self.responses[-64:]
@@ -134,12 +137,18 @@ class Film:
     def render(self,t,w,h,paused=False,offset=0,help_on=False,ready=False):
         c=Canvas(w,h)
         from choreography import palette
-        c.palette=palette(t)
+        c.palette=STYLES if self.original else palette(t)
         if w<64 or h<24:
             c.center(h//2-2,'WORLD.EXECUTE(ME);',BRIGHT)
             c.center(h//2,'请放大窗口，或缩小终端字号',WHITE)
             c.center(h//2+2,f'{w} x {h} / minimum 64 x 24',NORMAL)
             c.center(h//2+4,'SPACE pause  Q quit',DIM)
+            return c
+        if 15.8<=t<29.709 and not ready:
+            from scenes import title_takeover
+            source=self.render(15.799,w,h,paused,offset,False,False) if t<18.1 else None
+            title_takeover(c,t,FONT,source)
+            if help_on:self.help(c,offset)
             return c
         end=self.config['duration']; e=self.cue(t+offset)
         act=max(x for x in CHAPTERS if x[0]<=max(0,t))
@@ -148,14 +157,24 @@ class Film:
         clock=f'{int(t)//60:02}:{int(t)%60:02}.{int(t*10)%10} / 03:32  {state}'
         c.put(w-width(clock)-2,0,clock,DIM)
         c.put(2,1,'-'*(w-4),DIM)
-        c.put(2,2,act[1],NORMAL)
+        c.put(2,2,act[1]+(' / ORIGINAL' if self.original else ' / WORD SCORE'),NORMAL)
+        vocal=self.word_score.at(t+offset)
+        if vocal and not ready and not self.original:
+            marker=f'{vocal["index"]+1:02d}/{vocal["count"]:02d}  {vocal["text"]}'
+            c.put(max(w//2,w-width(marker)-2),2,marker,WHITE)
+
         top=4; bottom=h-8; cy=(top+bottom)/2; cx=w/2
         sh=max(6,bottom-top+1)
         spec=self.energy(t)
         pulse=sum(spec[:10])/10
         c.clip=(top,bottom)
-        from choreography import draw_scene
-        draw_scene(c,t,top,bottom,pulse,e,self.response(t))
+        if self.original:
+            from scenes import draw_scene,phosphor
+            draw_scene(c,t,top,bottom,pulse,e)
+            phosphor(c,t,top,bottom)
+        else:
+            from choreography import draw_scene
+            draw_scene(c,t,top,bottom,pulse,e,self.response(t))
         c.clip=None
         # Spectrum is measured from the supplied song, sampled on the audio clock.
         sy=h-6; cols=min(80,w-8); start=(w-cols)//2
@@ -168,14 +187,25 @@ class Film:
         elif e:
             ens=wrap(e['en'],w-8); zhs=wrap(e['zh'],w-8)
             # Two reserved lines per language prevent changes in caption position.
-            for i,line in enumerate(ens[:2]):c.center(h-5+i,line,WHITE)
+            for i,line in enumerate(ens[:2]):c.center(h-5+i,line,WHITE if self.original else NORMAL)
+            if vocal and not self.original and abs(vocal['line_time']-e['time'])<.002:
+                cursor=0
+                for i,line in enumerate(ens[:2]):
+                    start=e['en'].find(line,cursor)
+                    if start<0:continue
+                    lo=max(start,vocal['char_start']);hi=min(start+len(line),vocal['char_end'])
+                    if hi>lo:
+                        xx=(w-width(line))//2+width(line[:lo-start])
+                        c.put(xx,h-5+i,e['en'][lo:hi],WHITE)
+                    cursor=start+len(line)
+
             for i,line in enumerate(zhs[:2]):c.center(h-3+i,line,BRIGHT)
         elif t>208:
             c.center(h-5,'PROCESS ENDED. THE LOOP REMAINS.',WHITE)
         else:
             c.center(h-5,'[ instrumental ]',DIM)
             c.center(h-3,'[ 间奏 ]',DIM)
-        hint='SPACE pause  <- -> seek  C respond  R restart  Q quit  H help'
+        hint='SPACE pause  <- -> seek  O compare  C respond  R restart  Q quit'
         c.center(h-1,crop(hint,w-4),DIM)
         if ready:self.slate(c,top,bottom)
         if help_on:self.help(c,offset)
@@ -190,7 +220,7 @@ class Film:
         c.center(min(bottom,cy+6),'[ SPACE / ENTER TO START ]',BRIGHT)
     def help(self,c,offset):
         lines=['CONTROLS / 操作','SPACE / ENTER   播放或暂停','LEFT / RIGHT    后退或前进 5 秒',
-               'R               从头播放','C               回应 / 留下回声','1 2 3 4 5       跳转五个章节','[ / ]           字幕提前 / 延后 0.1 秒',
+               'R               从头播放','C               回应 / 留下回声','O               原版 / 逐词版即时对比','J / K           上一词 / 下一词（暂停）','1 2 3 4 5       跳转五个章节','[ / ]           字幕提前 / 延后 0.1 秒',
                ', / .           上一句 / 下一句',
                '+ / -           音量','Q / ESC         退出','H               关闭帮助',f'字幕偏移 {offset:+.1f}s']
         w=min(c.w-4,58);x=(c.w-w)//2;y=(c.h-len(lines)-3)//2
@@ -285,11 +315,18 @@ def run(args,film):
                             if not started:started=True;ready=False;paused=False;audio.command('play')
                             else:paused=not paused;audio.command('pause' if paused else 'play')
                         elif key in ('c','C'):film.respond(current)
+                        elif key in ('o','O'):film.original=not film.original
                         elif key in ('r','R'):
                             film.responses.clear()
                             audio.command('seek 0');audio.command('play');started=True;ready=False;paused=False
                         elif key in '12345':
                             audio.command(f'seek {CHAPTERS[int(key)-1][0]}');audio.command('play');started=True;ready=False;paused=False
+                        elif key in 'jJkK':
+                            times=film.word_score.starts
+                            i=bisect.bisect_right(times,current+.01)-1
+                            i=min(len(times)-1,max(0,i+(1 if key in 'kK' else -1)))
+                            audio.command('pause');audio.command(f'seek {times[i]+.01}')
+                            started=True;ready=False;paused=True
                         elif key=='[':offset=round(offset+.1,2)
                         elif key==']':offset=round(offset-.1,2)
                         elif key in ',.':
@@ -309,13 +346,14 @@ def run(args,film):
 
 def main():
     p=argparse.ArgumentParser(description='world.execute(me); / bilingual terminal MV')
+    p.add_argument('--original',action='store_true',help='use original scene choreography for A/B comparison')
     p.add_argument('--audio');p.add_argument('--start',type=float,default=0.)
     p.add_argument('--autoplay',action='store_true');p.add_argument('--fps',type=int,default=24)
     p.add_argument('--paused',action='store_true')
     p.add_argument('--offset',type=float);p.add_argument('--snapshot',type=float)
     p.add_argument('--width',type=int,default=120);p.add_argument('--height',type=int,default=40)
     p.add_argument('--plain',action='store_true');p.add_argument('--report');p.add_argument('--stop-after',type=float)
-    a=p.parse_args();film=Film()
+    a=p.parse_args();film=Film(original=a.original)
     if not 5<=a.fps<=60:p.error('--fps must be between 5 and 60')
     if a.snapshot is not None:
         c=film.render(a.snapshot,a.width,a.height,True)

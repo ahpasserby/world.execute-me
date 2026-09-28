@@ -2026,11 +2026,11 @@ def lyric_vibration_sync(c,t,area,elapsed):
     c.center(bt,'[ COMPLETION / HEARTBEATS SYNCHRONIZED ]' if complete else '[ FEEL YOUR VIBRATIONS ]' if t<107.22 else '[ MATCHING YOUR RHYTHM ]',W if complete else N)
 
 
-def lyric_isolation_disconnect(c,t,area,elapsed):
+def lyric_isolation_disconnect(c,t,area,elapsed,departures=None):
     """Six departures follow the repeated lyric instead of breaking at once."""
     l,top,r,bt=area;cx,cy=(l+r)/2,(top+bt)/2
     rx=(r-l)*.39;ry=max(3,(bt-top-6)*.39)
-    breaks=(.70,1.32,2.20,3.28,4.02,4.88)
+    breaks=departures if departures is not None else (.70,1.32,2.20,3.28,4.02,4.88)
     gone=sum(elapsed>=cut for cut in breaks)
     c.center(top,f'CONNECTION LOSS / {gone:02d} OF 06',R if gone>3 else B)
     # Radar arcs and data streams remain active through the whole isolation phrase.
