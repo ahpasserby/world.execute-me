@@ -291,6 +291,47 @@ def parameters(c,t,area):
         c.center(bt,'[ PARAMETERS COMMITTED / INITIALIZATION COMPLETE ]',B)
 
 
+def rm_world_setup(c,t,area):
+    """The user's RM boot sequence, excerpted as a terminal code animation."""
+    l,top,r,bt=area
+    set_at=when(11.095,'Set');up=when(11.095,'up')
+    new=when(11.095,'new');world=when(11.095,'world')
+    begin=when(12.906,'begin')
+    compact=bt-top<20
+    blocks=(
+        ('void RM_RTOS_Init(void)',
+         ('    init_can(); init_imu();',
+          '    init_gimbal(); init_chassis();'),set_at,up),
+        ('void RM_RTOS_Threads_Init(void)',
+         ('    // start tasks with osThreadNew(...)',),new,begin),
+        ('void RM_RTOS_Default_Task(const void* arg)',
+         ('    osDelay(100);', '    Buzzer_Sing(DJI);'),world,begin),
+    )
+    box_w=min(r-l+1,86);x=(l+r-box_w)//2+1
+    c.box(x,top,box_w,bt-top+1,G)
+    c.put(x+2,top,' RM / SET UP OUR NEW WORLD ',B)
+    rows_per=3 if compact else 5
+    y=top+2 if compact else top+max(2,(bt-top-16)//2)
+    active=2 if t>=world else 1 if t>=new else 0
+    for index,(head,body,onset,body_onset) in enumerate(blocks):
+        if t<onset:continue
+        yy=y+index*rows_per
+        # Function heads arrive whole, so the short lyric stays readable.
+        c.put(x+2,yy,head+' {',W if index==active else B)
+        if compact:
+            if t>=body_onset:
+                line=('    Buzzer_Sing(DJI);' if index==2 else
+                      '    /* osThreadNew(...) */' if index==1 else body[0]) + ' }'
+                c.put(x+2,yy+1,line[:box_w-4],B if index==active else N)
+        else:
+            for j,line in enumerate(body):
+                if t>=body_onset:
+                    c.put(x+2,yy+1+j,line[:box_w-4],B if index==active else N)
+            c.put(x+2,yy+1+len(body),'}',N)
+    state='SIMULATION / TASKS RUNNING' if t>=13.891 else 'BEGIN / START TASKS' if t>=begin else 'SETUP / RM_RTOS'
+    c.put(x+2,bt,state,W if t>=13.891 else B)
+
+
 def time_travel(c,t,area):
     ad=when(53.225,'A.D');bc=when(53.225,'B.C')
     if t<ad:u=.08*clamp((t-when(51.363,'travel'))/.6)
@@ -571,6 +612,8 @@ def draw_scene(c,t,top,bottom,pulse,lyric=None,response=0):
         assembly(c,t,area)
     elif 7.446<=t<11.095:
         parameters(c,t,area)
+    elif 11.095<=t<15.8:
+        rm_world_setup(c,t,area)
     elif 29.709<=t<33.412:
         dimension(c,t,area)
     elif 33.412<=t<37.067:
