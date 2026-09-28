@@ -63,6 +63,7 @@ class Canvas:
     def __init__(self,w,h):
         self.w=w; self.h=h
         self.clip=None
+        self.palette=STYLES
         self.cells=[[(' ',DIM) for _ in range(w)] for _ in range(h)]
     def put(self,x,y,s,style=NORMAL):
         x=int(x); y=int(y)
@@ -101,7 +102,7 @@ class Canvas:
             out.append(f'\x1b[{y+1};1H')
             for ch,style in row:
                 if not ch: continue
-                if style!=last:out.append(STYLES[style]);last=style
+                if style!=last:out.append(self.palette[style]);last=style
                 out.append(ch)
         return ''.join(out)+'\x1b[0m'
     def plain(self): return '\n'.join(''.join(ch for ch,_ in r) for r in self.cells)
@@ -116,6 +117,13 @@ class Film:
         self.times=[x['time'] for x in self.lyrics]
         self.spectrum=json.loads((ROOT/'spectrum.json').read_text())
         self.config=json.loads((ROOT/'config.json').read_text())
+        self.responses=[]
+    def respond(self,t):
+        self.responses.append(max(0.,t))
+        self.responses=self.responses[-64:]
+    def response(self,t):
+        recent=[x for x in self.responses if 0<=t-x<1.8]
+        return math.exp(-(t-max(recent))*2) if recent else 0.
     def cue(self,t):
         idx=bisect.bisect_right(self.times,t)-1
         e=self.lyrics[idx] if idx>=0 else None
@@ -125,17 +133,13 @@ class Film:
         return a[min(len(a)-1,max(0,int(t*self.spectrum['fps'])))]
     def render(self,t,w,h,paused=False,offset=0,help_on=False,ready=False):
         c=Canvas(w,h)
+        from choreography import palette
+        c.palette=palette(t)
         if w<64 or h<24:
             c.center(h//2-2,'WORLD.EXECUTE(ME);',BRIGHT)
             c.center(h//2,'请放大窗口，或缩小终端字号',WHITE)
             c.center(h//2+2,f'{w} x {h} / minimum 64 x 24',NORMAL)
             c.center(h//2+4,'SPACE pause  Q quit',DIM)
-            return c
-        if 15.8<=t<29.709 and not ready:
-            from scenes import title_takeover
-            source=self.render(15.799,w,h,paused,offset,False,False) if t<18.1 else None
-            title_takeover(c,t,FONT,source)
-            if help_on:self.help(c,offset)
             return c
         end=self.config['duration']; e=self.cue(t+offset)
         act=max(x for x in CHAPTERS if x[0]<=max(0,t))
@@ -150,9 +154,8 @@ class Film:
         spec=self.energy(t)
         pulse=sum(spec[:10])/10
         c.clip=(top,bottom)
-        from scenes import draw_scene, phosphor
-        draw_scene(c,t,top,bottom,pulse,e)
-        phosphor(c,t,top,bottom)
+        from choreography import draw_scene
+        draw_scene(c,t,top,bottom,pulse,e,self.response(t))
         c.clip=None
         # Spectrum is measured from the supplied song, sampled on the audio clock.
         sy=h-6; cols=min(80,w-8); start=(w-cols)//2
@@ -172,7 +175,7 @@ class Film:
         else:
             c.center(h-5,'[ instrumental ]',DIM)
             c.center(h-3,'[ 间奏 ]',DIM)
-        hint='SPACE play/pause   <- -> 5s   R restart   Q quit   H help'
+        hint='SPACE pause  <- -> seek  C respond  R restart  Q quit  H help'
         c.center(h-1,crop(hint,w-4),DIM)
         if ready:self.slate(c,top,bottom)
         if help_on:self.help(c,offset)
@@ -180,13 +183,14 @@ class Film:
     def slate(self,c,top,bottom):
         for y in range(top,bottom+1):c.put(0,y,' '*c.w,DIM)
         cy=int((top+bottom)/2)
-        c.center(top+1,'A TERMINAL MUSIC VIDEO',DIM)
+        c.center(top+1,'AN ASCII LOVE LETTER / RECOMPOSED',DIM)
         c.big(max(top+2,cy-4),'EXECUTE(ME);',BRIGHT)
-        c.center(cy+3,'M I L I',WHITE)
+        c.center(cy+3,'M I L I  /  WORLD.EXECUTE(ME);',WHITE)
+        if bottom-top>22:c.center(cy+5,'YOU ARE FREE. I AM TRAPPED.',DIM)
         c.center(min(bottom,cy+6),'[ SPACE / ENTER TO START ]',BRIGHT)
     def help(self,c,offset):
         lines=['CONTROLS / 操作','SPACE / ENTER   播放或暂停','LEFT / RIGHT    后退或前进 5 秒',
-               'R               从头播放','1 2 3 4 5       跳转五个章节','[ / ]           字幕提前 / 延后 0.1 秒',
+               'R               从头播放','C               回应 / 留下回声','1 2 3 4 5       跳转五个章节','[ / ]           字幕提前 / 延后 0.1 秒',
                ', / .           上一句 / 下一句',
                '+ / -           音量','Q / ESC         退出','H               关闭帮助',f'字幕偏移 {offset:+.1f}s']
         w=min(c.w-4,58);x=(c.w-w)//2;y=(c.h-len(lines)-3)//2
@@ -280,7 +284,9 @@ def run(args,film):
                         if key in (' ','\r','\n'):
                             if not started:started=True;ready=False;paused=False;audio.command('play')
                             else:paused=not paused;audio.command('pause' if paused else 'play')
+                        elif key in ('c','C'):film.respond(current)
                         elif key in ('r','R'):
+                            film.responses.clear()
                             audio.command('seek 0');audio.command('play');started=True;ready=False;paused=False
                         elif key in '12345':
                             audio.command(f'seek {CHAPTERS[int(key)-1][0]}');audio.command('play');started=True;ready=False;paused=False
