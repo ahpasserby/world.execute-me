@@ -8,7 +8,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from player import Film, width, WHITE, Canvas
-from choreography import EXECUTIONS, scripted_time
+from choreography import EXECUTIONS, scripted_time, love_letters, LOVE_PHRASES
 from word_score import WordScore, score
 import scenes
 
@@ -51,6 +51,59 @@ class TerminalScoreTests(unittest.TestCase):
         male=self.score.onset(90.197,'M')
         self.assertLess(scripted_time(male-.01),90.197)
         self.assertGreater(scripted_time(male+.01),90.197)
+
+    def test_switch_results_hold_until_next_action_without_delaying_captions(self):
+        cases = (
+            (47.9, 'lyric_ac_dc', 'And then blind my vision'),
+            (92.3, 'lyric_identity_rewrite', 'And then do whatever'),
+            (95.9, 'lyric_daynight_clock', 'Oh switch my role'),
+            (99.8, 'lyric_gender_role_switch', 'So we can enter'),
+            (55.5, 'lyric_time_travel', 'And we can unite'),
+        )
+        for t, name, caption in cases:
+            with patch.object(scenes,name,wraps=getattr(scenes,name)) as fn:
+                frame = self.film.render(t,128,44).plain()
+                self.assertTrue(fn.called, (t,name))
+                self.assertIn(caption, frame)
+        self.assertIn('COMMITTED',self.film.render(92.3,128,44).plain())
+        self.assertIn('PM / NIGHT CYCLE',self.film.render(95.9,128,44).plain())
+        self.assertIn('TRANSFORMATION: 100%',self.film.render(99.8,128,44).plain())
+        # These completed frames persist for at least half a second.
+        for a,b in ((47.64,48.24),(92.,92.53),(95.62,96.12)):
+            self.assertAlmostEqual(scripted_time(a),scripted_time(b))
+        for t,name in ((48.26,'lyric_dizzy'),(92.54,'lyric_daynight_clock'),
+                       (96.13,'lyric_gender_role_switch'),(100.84,'lyric_dizzy'),
+                       (56.43,'lyric_unite_deeply')):
+            with patch.object(scenes,name,wraps=getattr(scenes,name)) as fn:
+                self.film.render(t,128,44)
+                self.assertTrue(fn.called,(t,name))
+
+    def test_role_changes_on_m_instead_of_finishing_before_it(self):
+        onset = self.score.onset(97.739,'M')
+        with patch.object(scenes,'lyric_gender_role_switch') as fn:
+            self.film.render(onset-.01,128,44)
+            self.assertLess(fn.call_args.args[3]/2.5,.5)
+            self.film.render(onset+.01,128,44)
+            self.assertGreater(fn.call_args.args[3]/2.5,.5)
+
+    def test_love_adds_vowels_and_grows_on_each_attack(self):
+        for start,end in LOVE_PHRASES:
+            heights=[]
+            for offset,expected_letters in ((.01,2),(.24,3),(.47,6)):
+                c=Canvas(128,44)
+                love_letters(c,start+offset,(2,4,125,36))
+                columns=[any(c.cells[y][x][0]=='#' for y in range(44)) for x in range(128)]
+                groups=sum(lit and (x==0 or not columns[x-1]) for x,lit in enumerate(columns))
+                self.assertEqual(groups,expected_letters)
+                rows=[y for y,row in enumerate(c.cells) if any(ch=='#' for ch,_ in row)]
+                heights.append(max(rows)-min(rows)+1)
+            self.assertLess(heights[0],heights[1])
+            self.assertLess(heights[1],heights[2])
+        with patch.object(scenes,'lyric_outro_wait') as outro:
+            self.film.render(194,128,44)
+            self.assertFalse(outro.called, 'last vowel was cut off by the outro')
+            self.film.render(195.87,128,44)
+            self.assertTrue(outro.called)
 
     def test_give_opens_lines_before_dimension_unfolds_volume(self):
         give=self.score.onset(31.116,'give')

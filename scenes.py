@@ -2601,7 +2601,7 @@ def lyric_execution_orb(c,t,area,elapsed,pulse):
                 elif brightness>0.15:c.put(x,y,'.',N)
     c.center(cy,'EXECUTE',W)
 
-def lyric_love_equation(c,t,area,elapsed):
+def lyric_love_equation(c,t,area,elapsed,stamp=True):
     """A fictional love model: learning, inference, then numerical collapse."""
     l,top,r,bt=area; w=r-l+1; h=bt-top+1
     failure=clamp((t-179.929)/8.554)
@@ -2699,7 +2699,7 @@ def lyric_love_equation(c,t,area,elapsed):
     c.put(a,bt,status[:span],R if stage>=2 else B)
     # Each sung LOVE stamps across the complete model; the panels remain beneath.
     hit=next((start for start,end in ((179.929,180.857),(183.646,184.54),(187.665,188.483)) if start<=t<end),None)
-    if hit is not None:
+    if stamp and hit is not None:
         yy=(panel_top+panel_bottom)//2-2
         clear(c,a,yy,span,5)
         c.big(yy,'LOVE',R if stage>=2 else W)

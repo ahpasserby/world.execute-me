@@ -52,7 +52,21 @@ def retime(t, begin, end, anchors):
     return t
 
 
+def switch_windows():
+    # Keep the result through the connecting words, up to the next action.
+    return (
+        (44.452, when(47.672, 'blind'), when(45.85, 'DC'), 45.85, 1.10, .30),
+        (88.587, when(92.015, 'do'), when(90.197, 'M'), 90.197, 1.25, .35),
+        (92.015, when(95.465, 'switch'), when(93.953, 'PM'), 94.55, .915, .30),
+    )
+
+
 def scripted_time(t):
+    # Finish the change at a readable speed, then hold its completed state.
+    # Do not stretch the animation to the shot boundary: that leaves no hold.
+    for begin, end, onset, visual, span, duration in switch_windows():
+        if onset <= t < end:
+            return visual + span * clamp((t-onset)/duration)
     # Preserve complex upstream animations, but move decisive actions onto words.
     mappings = (
         (40.706, 44.452, [(when(40.706, 'approach'), 41.1),
@@ -281,7 +295,7 @@ def time_travel(c,t,area):
     ad=when(53.225,'A.D');bc=when(53.225,'B.C')
     if t<ad:u=.08*clamp((t-when(51.363,'travel'))/.6)
     elif t<bc:u=mix(.08,.45,clamp((t-ad)/max(.1,bc-ad)))
-    else:u=mix(.55,1.,clamp((t-bc)/max(.1,55.083-bc)))
+    else:u=mix(.55,1.,clamp((t-bc)/.35))
     original.lyric_time_travel(c,t,area,u*3.7)
     l,top,r,bt=area
     if t>=bc:c.center(top,'B.C. / TIME RUNS BACKWARD',W)
@@ -376,8 +390,6 @@ def algebra(c,t,area):
         c.put(split-1,cy,'->',W)
     c.center(top,'I KNOW / THE ALGEBRAIC EXPRESSION OF LOVE',B)
     c.center(bt,'THE EQUATION IS CORRECT. THE ABSENCE REMAINS.',N)
-    if t>=187.665:
-        clear(c,l,cy-2,r-l+1,5);c.big(cy-2,'LOVE',W)
 
 
 def freedom(c,t,area,pulse):
@@ -488,9 +500,70 @@ def execution_memory(c,t,area):
     clear(c,l,bt,r-l+1,1);c.center(bt,labels[index],B)
 
 
+
+# Three vowel attacks per LO-O-OVE. These are authored beat subdivisions of
+# the source phrase cue, not additional Whisper/phoneme alignment results.
+LOVE_PHRASES = ((179.929, 180.857), (183.646, 184.54),
+                (187.665, 188.483), (191.356, 195.856))
+
+
+def love_letters(c, t, area):
+    phrase = next(((start, end) for start, end in LOVE_PHRASES if start <= t < end), None)
+    if phrase is None:
+        return
+    from player import FONT
+    start, end = phrase
+    attacks = (start, start+.23, start+.46)
+    count = bisect.bisect_right(attacks, t)
+    text = 'L' + 'O'*count + ('VE' if count == 3 else '')
+    l, top, r, bt = area
+    cx, cy = (l+r)//2, (top+bt)//2
+    # Accumulate vowels; each attack enlarges the lettering, with a brief pop.
+    age = t-attacks[count-1]
+    pop = math.sin(math.pi*clamp(age/.18))
+    max_h = max(5, min(12, bt-top-3))
+    height = min(max_h, 5+(count-1)*2+round(pop))
+    width = min(r-l-4, round((len(text)*6-1)*height/5*1.5))
+    x0, y0 = cx-width//2, cy-height//2
+    clear(c,l+1,cy-max_h//2-1,r-l-1,max_h+2)
+    # Resample the bitmap into terminal cells, preserving hollow, readable Os.
+    columns = len(text)*6-1
+    for yy in range(height):
+        row = min(4, yy*5//height)
+        for xx in range(width):
+            source = min(columns-1, xx*columns//width)
+            index, col = divmod(source, 6)
+            if col < 5 and FONT[text[index]][row][col] == '1':
+                c.put(x0+xx,y0+yy,'#',R)
+
+
+def held_switch(c,t,area):
+    """Route extended shots directly so their legacy end cannot cut them off."""
+    dc, gender, daynight = switch_windows()
+    clock = scripted_time(t)
+    if dc[0] <= t < dc[1]:
+        original.lyric_ac_dc(c,clock,area,clock-dc[0])
+    elif gender[0] <= t < gender[1]:
+        original.lyric_identity_rewrite(c,clock,area)
+    elif gender[1] <= t < daynight[1]:
+        original.lyric_daynight_clock(c,clock,area)
+    elif daynight[1] <= t < when(99.349,'enter'):
+        onset = when(97.739,'M')
+        if t < onset:
+            progress = .45*clamp((t-when(97.739,'S'))/max(.1,onset-when(97.739,'S')))
+        else:
+            progress = .5+.5*clamp((t-onset)/.35)
+        original.lyric_gender_role_switch(c,t,area,progress*2.5,'S','M')
+    else:
+        return False
+    return True
+
+
 def draw_scene(c,t,top,bottom,pulse,lyric=None,response=0):
     area=original.simple_area(c,top,bottom)
-    if t<1.74:
+    if held_switch(c,t,area):
+        pass
+    elif t<1.74:
         power(c,t,area)
     elif t<3.873:
         protection(c,t,area)
@@ -504,14 +577,18 @@ def draw_scene(c,t,top,bottom,pulse,lyric=None,response=0):
         circumference(c,t,area)
     elif 37.067<=t<40.706:
         tangents(c,t,area)
-    elif 51.363<=t<55.083:
+    elif 51.363<=t<when(55.083,'unite'):
         time_travel(c,t,area)
     elif 85.078<=t<88.587:
         god_proof(c,t,area)
+    elif 177.246<=t<184.54:
+        original.lyric_love_equation(c,t,area,t-177.246,stamp=False)
     elif 184.54<=t<188.483:
         algebra(c,t,area)
-    elif 188.483<=t<192.5:
+    elif 188.483<=t<195.856:
         freedom(c,t,area,pulse)
+    elif t>=195.856:
+        original.lyric_outro_wait(c,t,area,t-195.856)
     elif 110.9<=t<118.333:
         starts=(110.9,112.22,113.1,114.18,114.92,115.78)
         cuts=tuple(when(line,'left')-110.9 for line in starts)
@@ -524,3 +601,4 @@ def draw_scene(c,t,top,bottom,pulse,lyric=None,response=0):
     if 74.045<=t<85.078:organic_accents(c,t,area)
     original.phosphor(c,t,top,bottom)
     word_overlay(c,t,area,score().at(t),response)
+    love_letters(c,t,area)
